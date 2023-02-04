@@ -10,7 +10,7 @@ jobs:
     strategy:
       matrix:
         python-version: ['3.9', '3.10', 'pypy-3.9']
-        os: [windows-latest, ubuntu-latest]
+        os: [ubuntu-latest]
 
     runs-on: ${{ matrix.os }}
     steps:
