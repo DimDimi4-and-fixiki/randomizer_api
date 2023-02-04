@@ -10,7 +10,7 @@ env_reader = Env()
 env_reader.read_env()
 
 # Общее
-APPLICATION_NAME: str = env_reader.str('HOST', default='chess-api')
+APPLICATION_NAME: str = env_reader.str('APP_NAME', default='API')
 VERSION: str = env_reader.str('TAG', default='not_set')
 
 _old_env_var_value = env_reader.str('ENV', default='local')

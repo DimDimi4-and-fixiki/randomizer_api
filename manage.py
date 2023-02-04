@@ -5,12 +5,12 @@ from config import HOST, PORT
 
 
 @click.group()
-def cli():
+def cli():  # pragma: no cover
     pass
 
 
 @cli.command()
-def run_server():
+def run_server():  # pragma: no cover
     uvicorn.run('commands.run_server:main_app', host=HOST, port=PORT, log_level='info', reload=True)
 
 

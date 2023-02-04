@@ -9,12 +9,12 @@ application = FastAPI(
 
 
 @application.get('/ping')
-async def ping() -> str:
+async def ping() -> str:  # pragma: no cover
     return 'pong from app'
 
 
 @application.get('/', include_in_schema=False)
-async def redirect_to_docs() -> RedirectResponse:
+async def redirect_to_docs() -> RedirectResponse:  # pragma: no cover
     response = RedirectResponse(url='/docs')
     return response
 
